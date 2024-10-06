@@ -1,0 +1,40 @@
+<mat-sidenav-container class="main-container" fullscreen>
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    [ngStyle]="{ width: '250px' }"
+    class="sidenav-content"
+    (opened)="menuOpened = true"
+    (closed)="menuOpened = false"
+  >
+    <mat-toolbar color="primary">
+      <span>Menu</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="/heroes/search">Search</a>
+      <a mat-list-item routerLink="/heroes/new-hero">New Hero</a>
+      <a mat-list-item routerLink="/heroes/list">List Heroes</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()" *ngIf="!menuOpened">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="spacer"></span>
+      <span>Heroes APP</span>
+    </mat-toolbar>
+
+    <!-- Contenido Principal -->
+    <div class="col-12 mt-5 md:col-6 md:col-offset-3 md:mt-8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
