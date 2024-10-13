@@ -1,1 +1,18 @@
-<p>search-page works!</p>
+<mat-form-field class="w-full">
+  <mat-label>Search</mat-label>
+  <input
+    type="text"
+    placeholder="Pick one"
+    aria-label="Number"
+    matInput
+    [formControl]="searchInput"
+    [matAutocomplete]="auto"
+  />
+  <mat-autocomplete #auto="matAutocomplete">
+    @for (option of filteredOptions | async; track option) {
+    <mat-option [value]="option.superhero">{{ option.superhero }}</mat-option>
+    }
+  </mat-autocomplete>
+</mat-form-field>
+
+<app-list-page [options]="options"></app-list-page>

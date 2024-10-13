@@ -1,1 +1,9 @@
-<p>list-page works!</p>
+<h1>LIST HEROES</h1>
+<div class="grid grid-bm-8" *ngIf="heroes.length;else empty">
+  <div *ngFor="let hero of heroes" class="col-12 sm:col-4 md:col-3 xl:col-3">
+    <heroes-hero-card [hero]="hero"></heroes-hero-card>
+  </div>
+</div>
+<ng-template #empty>
+  <h1>There aren't heroes</h1>
+</ng-template>
