@@ -14,3 +14,8 @@
 - JSON-Server
 - Prime Flex
 
+## temario curso seccion 15
+
+- CRUD
+- Snacks
+- Formulario reactivos
