@@ -19,3 +19,14 @@
 - CRUD
 - Snacks
 - Formulario reactivos
+
+## temario curso seccion 16
+
+- Protección de rutas
+- Rutas privadas
+- Rutas públicas
+- Servicio de autenticación
+- Guards
+- Can Activate
+- Can Match
+- Mantener la sesión del usuario

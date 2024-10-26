@@ -28,7 +28,11 @@
         <mat-icon>menu</mat-icon>
       </button>
       <span class="spacer"></span>
-      <span>Heroes APP</span>
+      <span>Welcome: {{ user?.user }}</span>
+      <span class="spacer"></span>
+      <button mat-stroked-button (click)="logout()">
+        Logout
+      </button>
     </mat-toolbar>
 
     <!-- Contenido Principal -->
